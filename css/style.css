@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1c1c1a;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    height: 100vh;
+    width: 100%;
+}
+nav{
+    background-color:  rgba(0, 0, 0, 0);
+    height: 15vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+}
+nav .logo span{
+    color:#eddb78;
+}
+nav .menu{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+nav .menu a{
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav .menu a:hover{
+    color: #eddb78;
+}
+section{
+    width: 100%;
+    height: 85vh;
+}
+section .intro{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 10%;
+    text-align: center;
+}
+section .intro ul{
+    list-style: none;
+}
+section .intro ul .first{
+    color: white;
+    font-size: 1.2em;
+}
+section .intro ul .name{
+    font-size: 3em;
+    color: #eddb78;
+    font-weight: bold;
+}
+section .intro ul .title{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+section .intro ul .contactme{
+    padding: 10px;
+    border: 3px solid #eddb78;
+    color: #ffffff;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: 0.6s;
+}
+section .intro ul .contactme:hover{
+    background-color: #eddb78;
+    color: #000000;
+}
