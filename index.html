@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" type="text/javascript"></script>
     <title>Portfolio</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">Port<span>folio</span></div>
-            <div class="menu">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Project</a>
-            </div>
-        </nav>
-        <section>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Port<span>fo</span>lio</div>
+                <div class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#aboutme">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#project">Project</a>
+                </div>
+            </nav>
+        </header>
+        <section id="home">
             <div class="intro">
                 <ul>
                     <li class="first">Hi I'm</li>
                     <li class="name">Hardik Gehlot</li>
-                    <li class="title">Full Stack Java Developer.</li>
-                    <li><button class="contactme">contact</button></li>
+                    <li class="title"><div>Full Stack Java Developer.</div></li>
+                    <li><a href="#contactme" class="contactme">contact</a></li>
                 </ul>
             </div>
+            <div class="profileimg">
+                <div class="rectangle"></div>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div onmouseover="handler()" onmouseout="outhandler()" class="img" id="profileimage"></div>
+            </div>
+
         </section>
-    </header>
+
+        <section id="aboutme">
+            <div class="content">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores ipsa minima, voluptatibus ea
+                    voluptates perspiciatis dignissimos eius doloremque quo repellendus rem error reprehenderit tempore
+                    ullam odio nulla quis corporis, corrupti ex perferendis illum quibusdam. Dolorem fuga labore aperiam
+                    laboriosam assumenda earum magni fugiat quidem. Illo omnis, quo soluta ea animi facere nihil rem?
+                    Minima
+                    quia praesentium, molestias quis unde vitae voluptate dicta, velit qui provident explicabo, quisquam
+                    aut
+                    facere? Eum quaerat alias eius iure id consectetur veniam pariatur voluptatem minima ea? Architecto
+                    illum officia odit soluta itaque, debitis qui non provident dolore animi distinctio molestias
+                    dignissimos quidem ex aut, expedita minima repellat, adipisci laudantium ducimus totam? Rem
+                    veritatis
+                    eaque iure eius nulla fugiat voluptatem culpa reiciendis rerum consequatur eligendi ut inventore
+                    voluptate tempora natus eum provident, vel quo nesciunt enim odio, iste accusantium illo. Odio optio
+                    maxime distinctio. Consequatur dignissimos ipsam nesciunt molestias consectetur quibusdam, deleniti
+                    esse
+                    ut sed?</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="content">
+                <h1>Skills</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores ipsa minima, voluptatibus ea
+                    voluptates perspiciatis dignissimos eius doloremque quo repellendus rem error reprehenderit tempore
+                    ullam odio nulla quis corporis, corrupti ex perferendis illum quibusdam. Dolorem fuga labore aperiam
+                    laboriosam assumenda earum magni fugiat quidem. Illo omnis, quo soluta ea animi facere nihil rem?
+                    Minima
+                    quia praesentium, molestias quis unde vitae voluptate dicta, velit qui provident explicabo, quisquam
+                    aut
+                    facere? Eum quaerat alias eius iure id consectetur veniam pariatur voluptatem minima ea? Architecto
+                    illum officia odit soluta itaque, debitis qui non provident dolore animi distinctio molestias
+                    dignissimos quidem ex aut, expedita minima repellat, adipisci laudantium ducimus totam? Rem
+                    veritatis
+                    eaque iure eius nulla fugiat voluptatem culpa reiciendis rerum consequatur eligendi ut inventore
+                    voluptate tempora natus eum provident, vel quo nesciunt enim odio, iste accusantium illo. Odio optio
+                    maxime distinctio. Consequatur dignissimos ipsam nesciunt molestias consectetur quibusdam, deleniti
+                    esse
+                    ut sed?</p>
+            </div>
+        </section>
+        <section id="project">
+            <div class="content">
+                <h1>Projects</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores ipsa minima, voluptatibus ea
+                    voluptates perspiciatis dignissimos eius doloremque quo repellendus rem error reprehenderit tempore
+                    ullam odio nulla quis corporis, corrupti ex perferendis illum quibusdam. Dolorem fuga labore aperiam
+                    laboriosam assumenda earum magni fugiat quidem. Illo omnis, quo soluta ea animi facere nihil rem?
+                    Minima
+                    quia praesentium, molestias quis unde vitae voluptate dicta, velit qui provident explicabo, quisquam
+                    aut
+                    facere? Eum quaerat alias eius iure id consectetur veniam pariatur voluptatem minima ea? Architecto
+                    illum officia odit soluta itaque, debitis qui non provident dolore animi distinctio molestias
+                    dignissimos quidem ex aut, expedita minima repellat, adipisci laudantium ducimus totam? Rem
+                    veritatis
+                    eaque iure eius nulla fugiat voluptatem culpa reiciendis rerum consequatur eligendi ut inventore
+                    voluptate tempora natus eum provident, vel quo nesciunt enim odio, iste accusantium illo. Odio optio
+                    maxime distinctio. Consequatur dignissimos ipsam nesciunt molestias consectetur quibusdam, deleniti
+                    esse
+                    ut sed?</p>
+            </div>
+        </section>
+        <section id="contactme">
+            <div class="content">
+                <h1>contact</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores ipsa minima, voluptatibus ea
+                    voluptates perspiciatis dignissimos eius doloremque quo repellendus rem error reprehenderit tempore
+                    ullam odio nulla quis corporis, corrupti ex perferendis illum quibusdam. Dolorem fuga labore aperiam
+                    laboriosam assumenda earum magni fugiat quidem. Illo omnis, quo soluta ea animi facere nihil rem?
+                    Minima</p>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
