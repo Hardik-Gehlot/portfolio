@@ -1,0 +1,43 @@
+@import "../../mixins.scss";
+
+#skills {
+    position: relative;
+    width: 100%;
+    min-height: $SectionHeight;
+    padding: $SectionPadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+    @include md {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    h1 {
+        @include headingText;
+    }
+
+    .skilldiv {
+        color: white;
+
+        .items {
+            width: calc(100vw - 40px);
+            display: grid;
+            grid-template-columns: repeat(4, 22%);
+            column-gap: 4%;
+            row-gap: 15px;
+
+            @include md {
+                width: calc(100vw - 80px);
+                grid-template-columns: repeat(5, 18%);
+                column-gap: 2.5%;
+                row-gap: 25px;
+            }
+            @include lg{
+                row-gap: 40px;
+            }
+        }
+    }
+}

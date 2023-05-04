@@ -1,0 +1,40 @@
+@import "../../mixins.scss";
+#education {
+    position: relative;
+    width: 100%;
+    min-height: $SectionHeight;
+    padding: $SectionPadding;
+    overflow-x: hidden;
+    @include md{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    h1{
+        @include headingText;
+        margin-bottom: 40px;
+    }
+    .edudiv {
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        position: relative;
+        .bar {
+            position: relative;
+            float: top;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 350px;
+            background-color: #686868;
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 40px;
+            height: 350px;
+        }
+    }
+}
