@@ -1,13 +1,24 @@
 @import "../../mixins.scss";
+
 .design-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   background-color: black;
   min-height: $SectionHeight;
   padding: $SectionPadding;
   font-family: Jost;
+
+  h1 {
+    @include headingText;
+  }
+
+  @include md {
+    padding-left: 100px;
+    padding-right: 80px;
+  }
+
   .timeline {
     width: 80%;
     height: auto;
@@ -15,10 +26,12 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+
     @include md {
       display: grid;
       grid-template-columns: 1fr 3px 1fr;
     }
+
     .timeline-content {
       padding: 20px;
       background: #040404;
@@ -36,18 +49,22 @@
       flex-direction: column;
       gap: 5px;
       color: rgb(94, 94, 94);
+
       &.timeline-component {
         margin: 0px 20px 20px 20px;
       }
-      h3{
+
+      h3 {
         color: White;
         font-weight: bold;
       }
-      h4{
+
+      h4 {
         color: rgb(217, 217, 217);
         font-size: 0.9em;
       }
     }
+
     .timeline-middle {
       @include md {
         position: relative;
@@ -56,15 +73,18 @@
         height: 100%;
       }
     }
+
     .main-middle {
       @include md {
         opacity: 0;
       }
     }
+
     .timeline-circle {
-      img{
+      img {
         display: none;
       }
+
       @include md {
         position: absolute;
         top: 0;
@@ -73,7 +93,9 @@
         height: 30px;
         border-radius: 50%;
         transform: translateX(-50%);
-        img{
+
+        img {
+          display: block;
           height: 100%;
           width: 100%;
         }

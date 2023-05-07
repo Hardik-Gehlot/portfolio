@@ -25,50 +25,53 @@ const Education = () => {
         }
     }
     return (
-        <section class="design-section">
-            <div class="timeline">
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle">
-                    <img src={hat}/>
+        <div id='education'>
+            <section class="design-section">
+                <h1>Education</h1>
+                <div class="timeline">
+                    <div class="timeline-empty">
                     </div>
-                </div>
-                <div class="timeline-component timeline-content">
-                    <h5 className="time">{education.btech.time}</h5>
-                    <h3 className="course">{education.btech.course}</h3>
-                    <h4 className="place">{education.btech.from}<br></br>{education.btech.location}</h4>
-                    <h6 className="percent">{education.btech.percent}</h6>
-                </div>
-                <div class="timeline-component timeline-content">
-                <h5 className="time">{education.hsc.time}</h5>
-                    <h3 className="course">{education.hsc.course}</h3>
-                    <h4 className="place">{education.hsc.from }<br></br>{ education.hsc.location}</h4>
-                    <h6 className="percent">{education.hsc.percent}</h6>
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle">
-                        <img src={hat}/>
+                    <div class="timeline-middle">
+                        <div class="timeline-circle">
+                            <img src={hat} />
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle">
-                    <img src={hat}/>
+                    <div class="timeline-component timeline-content">
+                        <h5 className="time">{education.btech.time}</h5>
+                        <h3 className="course">{education.btech.course}</h3>
+                        <h4 className="place">{education.btech.from}<br></br>{education.btech.location}</h4>
+                        <h6 className="percent">{education.btech.percent}</h6>
                     </div>
-                </div>
-                <div class=" timeline-component timeline-content">
-                <h5 className="time">{education.ssc.time}</h5>
-                    <h3 className="course">{education.ssc.course}</h3>
-                    <h4 className="place">{education.ssc.from}<br></br>{education.ssc.location}</h4>
-                    <h6 className="percent">{education.ssc.percent}</h6>
-                </div>
+                    <div class="timeline-component timeline-content">
+                        <h5 className="time">{education.hsc.time}</h5>
+                        <h3 className="course">{education.hsc.course}</h3>
+                        <h4 className="place">{education.hsc.from}<br></br>{education.hsc.location}</h4>
+                        <h6 className="percent">{education.hsc.percent}</h6>
+                    </div>
+                    <div class="timeline-middle">
+                        <div class="timeline-circle">
+                            <img src={hat} />
+                        </div>
+                    </div>
+                    <div class="timeline-empty">
+                    </div>
+                    <div class="timeline-empty">
+                    </div>
+                    <div class="timeline-middle">
+                        <div class="timeline-circle">
+                            <img src={hat} />
+                        </div>
+                    </div>
+                    <div class=" timeline-component timeline-content">
+                        <h5 className="time">{education.ssc.time}</h5>
+                        <h3 className="course">{education.ssc.course}</h3>
+                        <h4 className="place">{education.ssc.from}<br></br>{education.ssc.location}</h4>
+                        <h6 className="percent">{education.ssc.percent}</h6>
+                    </div>
 
-            </div>
-        </section >
+                </div>
+            </section >
+        </div>
     )
 }
 
