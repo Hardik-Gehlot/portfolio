@@ -1,6 +1,5 @@
 import Button from "../Button";
 import profile from "../../assets/images/profile.png";
-import Lottie from 'react-lottie';
 import "./style.scss";
 const Home = () => {
     function handleClick() {
