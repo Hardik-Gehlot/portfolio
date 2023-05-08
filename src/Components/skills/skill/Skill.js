@@ -1,9 +1,5 @@
-import fullStar from "../../../assets/images/star-full.png";
-import halfStar from "../../../assets/images/star-half.png";
-import emptyStar from "../../../assets/images/star-empty.png";
 import "./style.scss";
-const Skill = ({image,title,fullstars,isHalfstar}) => {
-  var arr = [];
+const Skill = ({image,title}) => {
   return (
     <div className="skill-item">
       <img src={image} />

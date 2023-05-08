@@ -1,9 +1,9 @@
 import ContactForm from "./form/ContactForm";
-import github from "../../assets/images/github.png";
-import linkedin from "../../assets/images/linkedin.png";
-import email from "../../assets/images/email.png";
-import call from "../../assets/images/call.png";
-import location from "../../assets/images/location.png";
+import github from "../../assets/icons/github.png";
+import linkedin from "../../assets/icons/linkedin.png";
+import email from "../../assets/icons/email.png";
+import call from "../../assets/icons/call.png";
+import location from "../../assets/icons/location.png";
 import "./style.scss";
 const ContactMe = () => {
     return (
