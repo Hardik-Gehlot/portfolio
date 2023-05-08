@@ -1,10 +1,9 @@
-import AboutMe from "./AboutMe";
-import ContactMe from "./ContactMe";
-import Education from "./Education";
-import Home from "./Home";
-import Skills from "./Skills";
-import Projects from "./Projects";
-
+import AboutMe from "./aboutme/AboutMe";
+import ContactMe from "./contact/ContactMe";
+import Education from "./education/Education";
+import Home from "./home/Home";
+import Skills from "./skills/Skills";
+import Projects from "./projects/Projects";
 const Section = () => {
   return (
     <>

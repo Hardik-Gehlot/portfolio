@@ -1,0 +1,242 @@
+@import "../../mixins.scss";
+
+#home {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-top: 60px;
+
+  @include md {
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .intro {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 3em;
+    z-index: 5;
+
+    @include md {
+      margin-right: 50px;
+    }
+
+    @include lg {
+      margin-right: 100px;
+    }
+
+    @include xl {
+      margin-right: 20vw;
+    }
+
+    ul {
+      list-style: none;
+
+      .first {
+        color: white;
+        font-size: 1em;
+        text-align: left;
+
+        .lottie {
+          width: 40px;
+          display: inline-block;
+        }
+
+        @include md {
+          font-size: 1.5em;
+        }
+      }
+
+      .name {
+        font-size: 2em;
+        text-shadow: 2px 2px 0px #de4c17;
+        color: #eddb78;
+        font-weight: bold;
+        display: flex;
+        gap: 5px;
+
+        .lottie {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include md {
+          font-size: 3em;
+          text-shadow: 3px 3px 0px #de4c17;
+
+          .lottie {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .title {
+        display: inline-block;
+        align-items: left;
+
+        div {
+          overflow: hidden;
+          font-size: 1em;
+          height: 20%;
+          color: #ffffff;
+          white-space: nowrap;
+          padding: 0px;
+
+          @include md {
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      .btnDiv {
+        text-align: left;
+        width: 100px;
+        height: 30px;
+
+        .btn {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          border: 0px solid #18181a;
+          color: #18181a;
+          display: inline-block;
+          font-size: 15px;
+          line-height: 15px;
+          box-sizing: content-box;
+          padding: 10px;
+          text-decoration: none;
+          cursor: pointer;
+          background: #fff;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          letter-spacing: 0em;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eddb78;
+            transform-origin: bottom center;
+            transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+            transform: skewY(9.3deg) scaleY(0);
+            z-index: 50;
+          }
+
+          &:hover:after {
+            transform-origin: bottom center;
+            transform: skewY(9.3deg) scaleY(2);
+          }
+
+          &:hover span:last-child {
+            transform: translateX(-50%) translateY(-100%);
+            opacity: 1;
+            transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+          }
+        }
+
+        span {
+          &:first-child {
+            position: relative;
+            transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+            z-index: 10;
+            text-align: center;
+          }
+
+          &:last-child {
+            color: black;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+            z-index: 100;
+            opacity: 0;
+            top: 50%;
+            left: 50%;
+            transform: translateY(225%) translateX(-50%);
+            height: 14px;
+            line-height: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .profileimg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 0;
+    width: 500px;
+    height: 500px;
+    opacity: .3;
+
+    @include md {
+      opacity: 0.5;
+      left: 20px;
+      transform: translateX(0%);
+      width: 400px;
+      height: 400px;
+    }
+
+    @include lg {
+      opacity: 0.5;
+      left: 60px;
+      transform: translateX(0%);
+      width: 400px;
+      height: 400px;
+    }
+
+    @include xl {
+      opacity: 0.5;
+      left: 100px;
+      transform: translateX(0%);
+      width: 400px;
+      height: 400px;
+    }
+
+    div {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .circle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #FBA1A1;
+        transition: 0.3s;
+      }
+    }
+  }
+}

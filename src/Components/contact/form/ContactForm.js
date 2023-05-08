@@ -1,3 +1,4 @@
+import "./style.scss";
 const ContactForm = () => {
     function sendMail(e) {
         e.preventDefault();

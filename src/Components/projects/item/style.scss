@@ -1,0 +1,69 @@
+@import "../../../mixins.scss";
+.project-item {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    min-width: calc(calc(100vw - 40px) / 1.5);
+    max-width: calc(calc(100vw - 40px) / 1.5);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    min-height: 250px;
+    @include md{
+        min-width: calc(calc(100vw - 40px) / 3);
+        max-width: calc(calc(100vw - 40px) / 3);
+    }
+    .title {
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+    }
+    .time{
+        color: gray;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .desc {
+        text-align: left;
+        color: rgb(107, 107, 107);
+        li{
+            list-style: none;
+        }
+    }
+    .technology{
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        gap: 8px;
+        overflow-x:hidden;
+        flex-wrap: wrap;
+        .techItem{
+            display: inline-block;
+            background-color: rgb(247, 66, 66);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.6em;
+        }
+    }
+    .actions{
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        .probtn{
+            width: 48%;
+            border-radius: 3px;
+            padding: 5px;
+            text-align:center;
+            cursor: pointer;
+            &.github{
+                background-color: rgb(23, 23, 23);
+            }
+            &.preview{
+                margin-left: 2%;
+                background-color: blue;
+            }
+        }
+    }
+} 

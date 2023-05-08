@@ -1,12 +1,13 @@
-import ContactForm from "./ContactForm";
-import github from "../assets/images/github.png";
-import linkedin from "../assets/images/linkedin.png";
-import email from "../assets/images/email.png";
-import call from "../assets/images/call.png";
-import location from "../assets/images/location.png";
+import ContactForm from "./form/ContactForm";
+import github from "../../assets/icons/github.png";
+import linkedin from "../../assets/icons/linkedin.png";
+import email from "../../assets/icons/email.png";
+import call from "../../assets/icons/call.png";
+import location from "../../assets/icons/location.png";
+import "./style.scss";
 const ContactMe = () => {
     return (
-        <section id="contactme">
+        <div id="contactme">
             <div className="content">
                 <div className="contactdiv">
                     <div className="left">
@@ -26,7 +27,7 @@ const ContactMe = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="right" />
+                    <div className="right" >
                     <div className="info">
                         <div className="info-item">
                             <img src={email}></img><span>hardikgehlot2303@outlook.com</span>
@@ -38,10 +39,12 @@ const ContactMe = () => {
                             <img src={location}></img><span>Jaipur</span>
                         </div>
                     </div>
+                    </div>
+                   
                 </div>
 
             </div>
-        </section>
+        </div>
     )
 }
 export default ContactMe;

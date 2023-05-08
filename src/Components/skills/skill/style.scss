@@ -1,0 +1,26 @@
+@import "../../../mixins.scss";
+.skill-item {
+    text-align: center;
+    img {
+        position: relative;
+        width: 50px;
+        aspect-ratio: 1/1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include md{
+            width: 60px;
+        }
+        @include lg{
+            width: 70px;
+        }
+    }
+    .title{
+        font-size: 0.6em;
+        @include md{
+            font-size: 0.7em;
+        }
+        @include lg{
+            font-size: 1em;
+        }
+    }
+}
