@@ -1,5 +1,4 @@
 import "./style.scss";
-import { AiOutlineGithub, AiFillEye } from "react-icons/ai";
 const Project = ({ obj }) => {
   var arr = [];
   var tech = [];
@@ -20,9 +19,9 @@ const Project = ({ obj }) => {
         <div className="technology">{tech}</div>
       </div>
       <div className="actions">
-        <div className="probtn github" onClick={() => window.open(obj.github)}><AiOutlineGithub /> Code</div>
+        <div className="probtn github" onClick={() => window.open(obj.github)}>Code</div>
         {
-          obj.preview && <div className="probtn preview" onClick={() => window.open(obj.preview)}><AiFillEye /> preview </div>
+          obj.preview && <div className="probtn preview" onClick={() => window.open(obj.preview)}>preview </div>
         }
       </div>
     </div>
