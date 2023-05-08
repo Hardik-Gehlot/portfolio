@@ -1,0 +1,31 @@
+@import "../../mixins.scss";
+#projects {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: $SectionPadding;
+
+  @include md {
+    padding-left: 100px;
+    padding-right: 80px;
+  }
+  h1{
+    @include headingText;
+  }
+  .projectdiv{
+    color: white;
+    background-color: rgb(13, 13, 13);
+    padding: 10px;
+    .items {
+        width: calc(100vw - 60px);
+        display: flex;
+        overflow-x: scroll;
+        gap: 5px;
+        @include md{
+            width:  calc(100vw - 200px);
+        }
+    }
+  }
+}
