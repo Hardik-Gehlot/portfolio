@@ -7,6 +7,7 @@
   display: flex;
   justify-content: start;
   padding: $SectionPadding;
+  margin-top: 10px;
 
   @include md {
     padding-left: 100px;

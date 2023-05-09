@@ -8,13 +8,13 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div className={`navbar ${mobileMenu ? 'mobileView' : ''}`}>
-      <div className="logo">Port<span>fo</span>lio</div>
+      <div className="logo">Hard<span>ik</span></div>
       <div className="menu">
-        <a href="#home">Home</a>
-        <a href="#aboutme">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Project</a>
+        <a href="#home" onClick={()=>setMobileMenu(false)}>Home</a>
+        <a href="#aboutme" onClick={()=>setMobileMenu(false)}>About</a>
+        <a href="#education" onClick={()=>setMobileMenu(false)}>Education</a>
+        <a href="#skills" onClick={()=>setMobileMenu(false)}>Skills</a>
+        <a href="#projects" onClick={()=>setMobileMenu(false)}>Project</a>
       </div>
       <div className="mobileMenuItems">
         {
