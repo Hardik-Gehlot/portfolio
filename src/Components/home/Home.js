@@ -1,9 +1,22 @@
 import Button from "../Button";
 import profile from "../../assets/images/profile.png";
 import { motion as m, useInView} from "framer-motion";
-import {useRef } from "react";
+import {useEffect, useRef, useState } from "react";
 import "./style.scss";
+import {fetchHome} from "../../database/fetchData";
 const Home = () => {
+    const [tagline,setTagline] = useState("");
+    useEffect(()=>{
+        const fetchData = async () => {
+            try {
+              const data = await fetchHome();
+              setTagline(data.tagline);
+            } catch (error) {
+              console.error(error);
+            }
+          };
+          fetchData();
+    },[]);
     const ref = useRef(null);
   const inView = useInView(ref);
     function handleClick() {
@@ -28,7 +41,7 @@ const Home = () => {
                 <ul>
                     <li className="first">Hi I'm </li>
                     <li className="name">Hardik Gehlot </li>
-                    <li className="title"><div>Android & Web Developer</div></li>
+                    <li className="title"><div>{tagline}</div></li>
                     <li className="btnDiv"><Button text={"Contact Me"} alternateText={"Stay Connected"} onClick={handleClick}></Button></li>
                 </ul>
             </m.div>
