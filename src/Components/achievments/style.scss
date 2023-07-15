@@ -1,0 +1,13 @@
+@import "../../mixins.scss";
+
+#achievements {
+    background-color: black;
+    width: 100%;
+    display: grid;
+    padding: 50px 10px;
+    grid-gap: 20px;
+    @include md {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 100px 50px;
+    }
+}

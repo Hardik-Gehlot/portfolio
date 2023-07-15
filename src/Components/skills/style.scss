@@ -9,10 +9,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    padding-bottom: 40px;
 
     @include md {
         padding-left: 80px;
         padding-right: 80px;
+        padding-bottom: 70px;
     }
 
     h1 {

@@ -4,6 +4,7 @@ import Education from "./education/Education";
 import Home from "./home/Home";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
+import Achievements from "./achievments/Achievements";
 const Section = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Section = () => {
         <Education/>
         <Skills/>
         <Projects/>
+        <Achievements/>
         <ContactMe/>
     </>
   )

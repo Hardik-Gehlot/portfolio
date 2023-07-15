@@ -1,31 +1,81 @@
 @import "../../mixins.scss";
+
 #projects {
   position: relative;
-  min-height: 500px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: start;
   padding: $SectionPadding;
+  background-color: $secondarybackground;
+  padding-bottom: 70px;
 
   @include md {
-    padding-left: 100px;
-    padding-right: 80px;
+    padding: 10px 50px 70px 50px
   }
-  h1{
+  @include lg{
+    padding: 10px 80px 70px 100px;
+  }
+
+  h1 {
     @include headingText;
   }
-  .projectdiv{
+
+  .categories {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: $font;
+    margin-bottom: 10px;
+
+    li {
+      border-left: 3px solid $mainColor;
+      padding-left: 10px;
+      box-sizing: content-box;
+
+      &:hover {
+        color: $mainColor;
+      }
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    .active {
+      color: $mainColor;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .projectdiv {
     color: white;
-    background-color: rgb(13, 13, 13);
-    padding: 10px;
+    padding: 20px;
+    flex-grow: 1;
     .items {
-        width: calc(100vw - 60px);
-        display: flex;
-        overflow-x: scroll;
-        gap: 5px;
-        @include md{
-            width:  calc(100vw - 200px);
-        }
+      width: calc(100vw - 60px);
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 10px;
+      height: 100%;
+      position: relative;
+
+      @include md {
+        width: calc(100vw - 150px);
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 10px;
+      }
+      @include lg {
+        width: calc(100vw - 200px);
+      }
     }
   }
 }

@@ -9,7 +9,7 @@
   min-height: $SectionHeight;
   padding: $SectionPadding;
   font-family: Jost;
-
+  background-color: $secondarybackground;
   h1 {
     @include headingText;
   }
@@ -55,7 +55,7 @@
       }
 
       h3 {
-        color: White;
+        color: $mainColor;
         font-weight: bold;
       }
 
@@ -68,7 +68,7 @@
     .timeline-middle {
       @include md {
         position: relative;
-        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        background-image: linear-gradient(45deg, #fa163f, #E94057, #8A2387);
         width: 3px;
         height: 100%;
       }
