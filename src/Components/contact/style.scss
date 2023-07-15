@@ -5,52 +5,47 @@
   min-height: 500px;
   display: flex;
   justify-content: start;
+  flex-direction: column;
   padding: $SectionPadding;
+  background-color: $secondarybackground;
 
   @include md {
     padding-left: 100px;
     padding-right: 80px;
   }
 
-  h2 {
-    color: #eddb78;
-    font-weight: bold;
+  h1 {
+    @include headingText;
   }
 
   .contactdiv {
     position: relative;
     color: white;
-    background-color: #1c1c1c;
-    width: calc(100vw - 40px);
     z-index: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: auto;
 
     @include md {
       flex-direction: row;
-      width: calc(100vw - 180px);
+      grid-template-columns: 2fr 1fr;
+      grid-auto-rows: auto;
+      // width: calc(100vw - 180px);
       min-height: 400px;
     }
 
     .left {
       position: relative;
-      width: 100%;
-      background-color: #1c1c1c;
       z-index: 1;
       padding: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       align-items: start;
       gap: 20px;
 
-      @include md {
-        width: 60%;
-      }
-
       .form {
         width: 100%;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -65,7 +60,7 @@
 
       .links {
         width: 100%;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
@@ -77,39 +72,42 @@
         }
 
         .link {
-          border-radius: 10px;
-          background-color: #31313176;
+          background-color:  #212121;
+          border-bottom: 2px solid $mainColor;
           padding: 8px 12px;
           display: flex;
           align-items: center;
           justify-content: space-around;
-
-          img {
-            width: 1em;
-            height: 1em;
-            margin-right: 0.5em;
-            width: 10px;
-            height: 10px;
+          gap: 5px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+          span{
+            font-family: $font;
+            font-weight: bold;
+          }
+          &:hover{
+            background-color: $mainColor;
           }
         }
       }
     }
 
     .right {
-      width: 100%;
-      background-color: #eddb78;
+      background-color: black;
       z-index: 1;
       display: flex;
-      align-items: center;
+      align-items: start;
+      flex-direction: column;
+      padding: 10px;
+      gap: 20px;
 
-      @include md {
-        width: 40%;
+      h3 {
+        font-family: $font;
       }
 
       .info {
-        width: 100%;
-        height: 80%;
-        background-color: rgb(73, 73, 73);
         z-index: 5;
         display: flex;
         justify-content: center;
@@ -117,26 +115,26 @@
         flex-direction: column;
         font-size: 0.9rem;
         gap: 15px;
-        padding: 10px;
-        transform: translateX(0%);
-
-        @include md {
-          transform: translateX(-20%);
-          background-color: black;
-        }
-
         .info-item {
           padding-left: 5px;
           display: flex;
           align-items: center;
           justify-content: space-around;
           overflow-wrap: break-word;
-
-          img {
-            width: 1em;
-            height: 1em;
-            margin-right: 0.5em;
+          gap: 10px;
+          .icon {
+            width: 40px;
+            height: 40px;
+            background-color: $mainColor;
+            padding: 10px;
+            svg{
+              color: rgb(190, 190, 190);
+              width: 100%;
+              height: 100%;
+              align-items: center;
+            }
           }
+
         }
       }
     }

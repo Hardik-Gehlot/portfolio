@@ -1,0 +1,38 @@
+@import "../../../mixins.scss";
+#achievement{
+    background-color: $secondarybackground;
+    border-bottom: 3px solid $mainColor;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  
+    gap: 20px;
+    font-family: $font;
+    .number{
+        font-size: 3em;
+        font-weight: bold;
+    }
+    .separator{
+        width: 3px;
+        height: 80%;
+        background-color: white;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        svg{
+            width: 40px;
+            height: 40px;
+            color: $mainColor;            
+        }
+        .text{
+            font-size: 1em;
+            font-family: 'open sans';
+            text-transform: capitalize;
+            font-weight: 500;
+            color: rgb(223, 223, 223);
+        }
+    }
+}

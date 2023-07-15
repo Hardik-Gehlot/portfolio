@@ -65,4 +65,30 @@ const fetchProjects = async() => {
     });
   return data;
 }
-export {fetchHome,fetchAboutMe,fetchEducation,fetchSkills,fetchProjects};
+const fetchAchievements = async() => {
+  const db = startFirebase();
+  const dbRef = ref(db);
+  let data = null;
+  await get(child(dbRef, `achievments`)).then((snapshot) => {
+      if (snapshot.exists()) {
+          data = snapshot.val();
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+  return data;
+}
+const fetchResume = async() => {
+  const db = startFirebase();
+  const dbRef = ref(db);
+  let data = null;
+  await get(child(dbRef, `resume`)).then((snapshot) => {
+      if (snapshot.exists()) {
+          data = snapshot.val();
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+  return data;
+}
+export {fetchHome,fetchAboutMe,fetchEducation,fetchSkills,fetchProjects,fetchAchievements,fetchResume};

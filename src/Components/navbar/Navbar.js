@@ -1,14 +1,21 @@
-import { useState } from "react";
-// import { SlMenu } from "react-icons/sl";
-// import { VscChromeClose } from "react-icons/vsc";
-import menu from "../../assets/icons/hamburger-menu.svg";
-import close from "../../assets/icons/cross.svg";
+import { useEffect, useState } from "react";
+import { SlMenu } from "react-icons/sl";
+import { VscChromeClose } from "react-icons/vsc";
 import "./style.scss";
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [top, setTop] = useState(true);
+  window.addEventListener('scroll', function() {
+    var scrollTop = this.window.scrollY;
+    if (scrollTop === 0) {
+      setTop(true);
+    } else {
+      setTop(false);
+    }
+  });
   return (
-    <div className={`navbar ${mobileMenu ? 'mobileView' : ''}`}>
-      <div className="logo">Hard<span>ik</span></div>
+    <div className={`navbar ${mobileMenu ? 'mobileView' : ''} ${top ? 'top' : ''}`}>
+      <div className="logo">H<span>ardik</span></div>
       <div className="menu">
         <a href="#home" onClick={()=>setMobileMenu(false)}>Home</a>
         <a href="#aboutme" onClick={()=>setMobileMenu(false)}>About</a>
@@ -19,9 +26,9 @@ const Navbar = () => {
       <div className="mobileMenuItems">
         {
           mobileMenu ? (
-            <img src={close} onClick={()=> {setMobileMenu(false)}}/>
+            <VscChromeClose onClick={()=> {setMobileMenu(false)}}/>
           ) : (
-            <img src={menu} onClick={()=> {setMobileMenu(true)}}/>
+            <SlMenu onClick={()=> {setMobileMenu(true)}}/>
           )
         }
       </div>

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Project from "./item/Project";
 import "./style.scss";
 import { useState } from "react";
-import {fetchProjects} from "../../database/fetchData";
+import { fetchProjects } from "../../database/fetchData";
 const Projects = () => {
     var p = {
         movix: {
@@ -43,7 +43,8 @@ const Projects = () => {
         }
     };
     const [projects, setProjects] = useState(null);
-    const [jsxToRender,setJsxToRender] = useState(null);
+    const [category, setCategory] = useState('all');
+    const [jsxToRender, setJsxToRender] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -57,27 +58,31 @@ const Projects = () => {
     }, []);
     useEffect(() => {
         if (projects !== null) {
+            let counter = 1;
             let jsx = Object.keys(projects).map(key => {
                 const obj = projects[key];
-                return (
-                    <Project key={key} obj={obj} />
-                );
+                if (category === 'all' || obj?.category === category) {
+                    return (
+                        <Project key={key} obj={obj} counter={counter++} />
+                    );
+                }
             });
             setJsxToRender(jsx);
         }
-    }, [projects]);
+    }, [projects, category]);
     return (
         <section id="projects">
             <div className="content">
                 <h1>Projects</h1>
+                <ul className="categories">
+                    <li className={(category=="all") ? 'active' : ''} onClick={()=>setCategory('all')}>All</li>
+                    <li className={category=="web" ? 'active' : ''} onClick={()=>setCategory('web')}>Web</li>
+                    <li className={category=="android" ? 'active' : ''} onClick={()=>setCategory('android')}>Android</li>
+                    <li className={category=="other" ? 'active' : ''} onClick={()=>setCategory('other')}>Other</li>
+                </ul>
                 <div className="projectdiv">
                     <div className="items">
-                    {(jsxToRender!=null)?jsxToRender:""}
-                        {/* <Project obj={projects.ecomm} />
-                        <Project obj={projects.movix} />
-                        <Project obj={projects.vendor} />
-                        <Project obj={projects.chatapp} />
-                        <Project obj={projects.evoting} /> */}
+                        {(jsxToRender != null) ? jsxToRender : ""}
                     </div>
                 </div>
             </div>

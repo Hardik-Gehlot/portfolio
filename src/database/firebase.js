@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
+import { getStorage} from "firebase/storage";
 
-function startFirebase() {
+function initApp(){
     const firebaseConfig = {
         apiKey: process.env.REACT_APP_API_KEY,
         authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -12,6 +13,12 @@ function startFirebase() {
         measurementId: process.env.REACT_APP_MEASUREMENT_ID
     };
     const app = initializeApp(firebaseConfig);
-    return getDatabase(app);
+    return app;
+}
+function startFirebase() {
+    return getDatabase(initApp());
+}
+function startStorage(){
+    return getStorage();
 }
 export default startFirebase;
